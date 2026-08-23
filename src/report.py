@@ -4,13 +4,13 @@ from models import Transaction, TransactionType
 # from repository import TransactionsRepository, InMemoryTransactionRepository
 
 
-class TransactionReport(ABC):
+class ReportGenerator(ABC):
     @abstractmethod
     def generate(self, transactions: List[Transaction]) -> str:
         pass
 
 
-class ConsoleTransactionReport(TransactionReport):
+class ConsoleReportGenerator(ReportGenerator):
     def generate(self, transactions: List[Transaction]) -> str:
         if not transactions:
             return "No transactions found."

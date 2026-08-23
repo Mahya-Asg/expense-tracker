@@ -19,7 +19,6 @@ class Transaction:
     amount: Decimal
     type: TransactionType
     category: Category
-
     date: datetime
     description: str == ""
     tags: Optional(Tuple[str, ...]) = None # pay ATTENTION !!!
