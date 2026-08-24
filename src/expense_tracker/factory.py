@@ -2,7 +2,7 @@ from datetime import datetime
 from decimal import Decimal
 from typing import Optional, Tuple
 
-from models import Transaction, TransactionType, Category
+from .models import Transaction, TransactionType, Category
 
 class TransactionFactory():
     @staticmethod

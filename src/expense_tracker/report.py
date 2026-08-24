@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from models import Transaction, TransactionType
+from .models import Transaction, TransactionType
 # from repository import TransactionsRepository, InMemoryTransactionRepository
 
 
