@@ -23,7 +23,7 @@ class ExpenseTracker():
                 description:str = "",
                 tags: Optional[Tuple[str, ...]] = None
                 ) -> Transaction:
-        transaction = self.factory.create_income(amount, category, description)
+        transaction = self.factory.create_income(amount, category, description,tags)
         self.repository.add(transaction)
         self._balance += amount
         self._total_income += amount
@@ -36,7 +36,7 @@ class ExpenseTracker():
                 description:str = "", 
                 tags: Optional[Tuple[str, ...]] = None
                 ) -> Transaction:
-        transaction = self.factory.create_expence(amount, category, description)
+        transaction = self.factory.create_expence(amount, category, description,tags)
         self.repository.add(transaction)
         self._balance -= amount
         self._total_expense += amount
