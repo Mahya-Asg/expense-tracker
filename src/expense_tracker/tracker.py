@@ -1,7 +1,7 @@
 from decimal import Decimal
 from typing import Optional 
 
-from .model import Transaction, TransactionType, Category
+from .models import Transaction, TransactionType, Category
 from .repository import TransactionsRepository
 from .factory import TransactionFactory
 from .report import ReportGenerator
@@ -17,7 +17,12 @@ class ExpenseTracker():
         self._total_expense: Decimal = Decimal('0')
 
 
-    def add_income(self, amount: Decimal,category: Category, description:str = "") -> Transaction:
+    def add_income(self, 
+                amount: Decimal,
+                category: Category, 
+                description:str = "",
+                tags: Optional[Tuple[str, ...]] = None
+                ) -> Transaction:
         transaction = self.factory.create_income(amount, category, description)
         self.repository.add(transaction)
         self._balance += amount
@@ -25,7 +30,12 @@ class ExpenseTracker():
         return transaction
 
         
-    def add_expence(self, amount: Decimal,category: Category, description:str = "") -> Transaction:
+    def add_expense(self, 
+                amount: Decimal,
+                category: Category, 
+                description:str = "", 
+                tags: Optional[Tuple[str, ...]] = None
+                ) -> Transaction:
         transaction = self.factory.create_expence(amount, category, description)
         self.repository.add(transaction)
         self._balance -= amount

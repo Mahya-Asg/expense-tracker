@@ -2,7 +2,7 @@ from abc import ABC,abstractmethod
 from datetime import datetime
 from typing import List
 
-from models import Category, Transaction
+from .models import Category, Transaction
 
 class TransactionsRepository(ABC):
     @abstractmethod
@@ -10,21 +10,21 @@ class TransactionsRepository(ABC):
         pass
     
     @abstractmethod
-    def get_all(self) -> List(Transaction):
+    def get_all(self) -> List[Transaction]:
         pass
     @abstractmethod
-    def get_by_category(self, category_name:str) -> List(Transaction):
+    def get_by_category(self, category_name:str) -> List[Transaction]:
         pass
 
     @abstractmethod
-    def get_by_date(self, start:datetime, end:datetime) -> List(Transaction):
+    def get_by_date(self, start:datetime, end:datetime) -> List[Transaction]:
         pass
 
 
 class InMemoryTransactionRepository(TransactionsRepository):
     
     def __init__(self):
-        self._transactions: List(Transaction) = [] 
+        self._transactions: List[Transaction] = [] 
         self._id = 1
     
     def add(self, transaction: Transaction):
@@ -33,7 +33,7 @@ class InMemoryTransactionRepository(TransactionsRepository):
         # a whole new object is created, check for better solutions.
         # Check ?
         transaction_with_id = Transaction(
-            id=self._next_id,
+            id=self._id,
             amount=transaction.amount,
             type=transaction.type,
             category=transaction.category,

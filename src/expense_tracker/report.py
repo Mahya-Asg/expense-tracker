@@ -1,4 +1,5 @@
 from abc import ABC, abstractmethod
+from typing import List
 
 from .models import Transaction, TransactionType
 # from repository import TransactionsRepository, InMemoryTransactionRepository
@@ -23,7 +24,7 @@ class ConsoleReportGenerator(ReportGenerator):
         report += f"Total Transactions: {len(transactions)}\n"
         report += f"Total Income      : {total_income}\n"
         report += f"Total Expense     : {total_expense}\n"
-        report += f"Current Balance   : {total_expense}\n\n"
+        report += f"Current Balance   : {balance}\n\n"
         report += "Transactions:\n"
         
         for t in sorted(transactions, key=lambda x: x.date, reverse=True):

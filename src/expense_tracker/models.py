@@ -21,7 +21,7 @@ class Transaction:
     category: Category
     date: datetime
     description: str == ""
-    tags: Optional(Tuple[str, ...]) = None # pay ATTENTION !!!
+    tags: Optional[Tuple[str, ...]] = None # pay ATTENTION !!!
 
 
 
