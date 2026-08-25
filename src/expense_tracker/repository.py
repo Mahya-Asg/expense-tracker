@@ -43,6 +43,7 @@ class InMemoryTransactionRepository(TransactionsRepository):
         )
         self._transactions.append(transaction_with_id)
         self._id += 1
+        return transaction_with_id
     
     def get_all(self) -> List[Transaction]: 
         return self._transactions.copy()
