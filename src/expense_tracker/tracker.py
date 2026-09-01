@@ -35,7 +35,7 @@ class ExpenseTracker():
                 description:str = "", 
                 tags: Optional[Tuple[str, ...]] = None
                 ) -> Transaction:
-        transaction = self.factory.create_expence(amount, category, description,tags)
+        transaction = self.factory.create_expense(amount, category, description,tags)
         self.repository.add(transaction)
         self._balance -= amount
         self._total_expense += amount
@@ -47,7 +47,7 @@ class ExpenseTracker():
     def get_total_income(self):
         return self._total_income
     
-    def get_total_expence(self)-> Decimal:
+    def get_total_expense(self)-> Decimal:
         return self._total_expense
     
     def get_report(self,report_generator: ReportGenerator) -> str:

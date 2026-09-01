@@ -42,5 +42,10 @@ expense-tracker/
 ├── requirements.txt
 └── .gitignore
 
-git@github.com:Mahya-Asg/expense-tracker.git
-https://github.com/Mahya-Asg/expense-tracker.git
+## To Do:
+
+Tuple/modern type hints
+expense spelling
+dataclasses.replace()
+repository add() return value
+tracker returning the saved transaction

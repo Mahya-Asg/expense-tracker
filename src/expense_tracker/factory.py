@@ -18,7 +18,7 @@ class TransactionFactory():
                         tags= tags)
 
     @staticmethod
-    def create_expence(amount: Decimal,
+    def create_expense(amount: Decimal,
                     category: Category,
                     description: str == "",
                     tags: Optional[Tuple[str, ...]] = None) -> Transaction:
