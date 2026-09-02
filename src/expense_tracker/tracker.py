@@ -27,7 +27,7 @@ class ExpenseTracker():
         saved_transaction = self.repository.add(transaction)
         self._balance += amount
         self._total_income += amount
-        return transaction
+        return saved_transaction
 
         
     def add_expense(self, 
@@ -37,10 +37,10 @@ class ExpenseTracker():
                 tags: Optional[tuple[str, ...]] = None
                 ) -> Transaction:
         transaction = self.factory.create_expense(amount, category, description,tags)
-        self.repository.add(transaction)
+        saved_transaction = self.repository.add(transaction)
         self._balance -= amount
         self._total_expense += amount
-        return transaction
+        return saved_transaction
 
     def get_balance(self) -> Decimal:
         return self._balance
