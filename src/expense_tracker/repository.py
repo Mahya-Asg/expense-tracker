@@ -1,4 +1,5 @@
 from abc import ABC,abstractmethod
+from dataclasses import replace
 from datetime import datetime
 
 from .models import Category, Transaction
@@ -29,17 +30,19 @@ class InMemoryTransactionRepository(TransactionsRepository):
     def add(self, transaction: Transaction):
         # self.transaction.id = self._id  # pay ATTENTION !!!
         # bacause of frozen true we cann't only modify the id.
-        # a whole new object is created, check for better solutions.
-        # Check ?
-        transaction_with_id = Transaction(
-            id=self._id,
-            amount=transaction.amount,
-            type=transaction.type,
-            category=transaction.category,
-            date=transaction.date,
-            description=transaction.description,
-            tags=transaction.tags
-        )
+        
+        # transaction_with_id = Transaction(
+        #     id=self._id,
+        #     amount=transaction.amount,
+        #     type=transaction.type,
+        #     category=transaction.category,
+        #     date=transaction.date,
+        #     description=transaction.description,
+        #     tags=transaction.tags
+        # )
+
+        # Create a new immutable transaction with the correct ID
+        transaction_with_id = replace(transaction, id=self._id)
         self._transactions.append(transaction_with_id)
         self._id += 1
         return transaction_with_id
