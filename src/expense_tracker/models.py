@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from datetime import datetime
 from decimal import Decimal
 from enum import Enum
-from typing import Optional, Tuple # pay ATTENTION !!!
+from typing import Optional # pay ATTENTION !!!
 
 
 class TransactionType(Enum):
@@ -21,7 +21,7 @@ class Transaction:
     category: Category
     date: datetime
     description: str == ""
-    tags: Optional[Tuple[str, ...]] = None # pay ATTENTION !!!
+    tags: Optional[tuple[str, ...]] = None # pay ATTENTION !!!
 
 
 

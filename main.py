@@ -4,10 +4,6 @@ from  expense_tracker.repository import InMemoryTransactionRepository
 from  expense_tracker.tracker import ExpenseTracker
 from  expense_tracker.report import ConsoleReportGenerator
 
-# delete
-# Add the src folder to Python path
-# sys.path.insert(0, str(Path(__file__).parent / "src")) 
-
 def main():
     repo = InMemoryTransactionRepository()
     tracker = ExpenseTracker(repo)

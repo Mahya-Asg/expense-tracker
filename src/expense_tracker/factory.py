@@ -1,5 +1,6 @@
 from datetime import datetime
 from decimal import Decimal
+from typing import Optional
 
 from .models import Transaction, TransactionType, Category
 
@@ -21,7 +22,7 @@ class TransactionFactory():
     def create_expense(amount: Decimal,
                     category: Category,
                     description: str == "",
-                    tags: Optional[Tuple[str, ...]] = None) -> Transaction:
+                    tags: Optional[tuple[str, ...]] = None) -> Transaction:
 
         return Transaction(id = 0,
                         amount = amount,

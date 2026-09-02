@@ -44,8 +44,8 @@ expense-tracker/
 
 ## To Do:
 
-Tuple/modern type hints
-expense spelling
+DONE Tuple/modern type hints
+DONE expense spelling
 dataclasses.replace()
 repository add() return value
 tracker returning the saved transaction

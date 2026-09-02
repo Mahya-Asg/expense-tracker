@@ -1,4 +1,5 @@
 from decimal import Decimal
+from typing import Optional
 
 from .models import Transaction, TransactionType, Category
 from .repository import TransactionsRepository
@@ -33,7 +34,7 @@ class ExpenseTracker():
                 amount: Decimal,
                 category: Category, 
                 description:str = "", 
-                tags: Optional[Tuple[str, ...]] = None
+                tags: Optional[tuple[str, ...]] = None
                 ) -> Transaction:
         transaction = self.factory.create_expense(amount, category, description,tags)
         self.repository.add(transaction)
