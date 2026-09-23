@@ -14,5 +14,7 @@ dist/
 
 
 # may change
-.ipynb
-.svg
+*.ipynb
+*.svg
+test.py
+json_repo_with_logger.py

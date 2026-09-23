@@ -1,0 +1,29 @@
+{"id": 1, "amount": "6500.00", "type": "income", "category": "Salary", "date": "2026-08-01T09:15:00", "description": "Monthly salary - August", "tags": ["regular", "main"]}
+{"id": 2, "amount": "1450.00", "type": "expense", "category": "Rent", "date": "2026-08-02T10:00:00", "description": "Apartment rent - August", "tags": ["housing", "fixed"]}
+{"id": 3, "amount": "87.50", "type": "expense", "category": "Groceries", "date": "2026-08-03T18:30:00", "description": "Weekly groceries at Carrefour", "tags": ["food"]}
+{"id": 4, "amount": "45.00", "type": "expense", "category": "Transport", "date": "2026-08-04T08:20:00", "description": "Uber to office", "tags": ["commute"]}
+{"id": 5, "amount": "1200.00", "type": "income", "category": "Freelance", "date": "2026-08-05T14:45:00", "description": "Website project payment", "tags": ["side-income"]}
+{"id": 6, "amount": "32.90", "type": "expense", "category": "Food", "date": "2026-08-06T13:15:00", "description": "Lunch with colleagues", "tags": ["food", "social"]}
+{"id": 7, "amount": "59.99", "type": "expense", "category": "Subscriptions", "date": "2026-08-07T00:00:00", "description": "Netflix + Spotify monthly", "tags": ["entertainment"]}
+{"id": 8, "amount": "210.00", "type": "expense", "category": "Utilities", "date": "2026-08-08T11:00:00", "description": "Electricity bill", "tags": ["home", "bills"]}
+{"id": 9, "amount": "75.00", "type": "expense", "category": "Health", "date": "2026-08-09T16:40:00", "description": "Pharmacy - medicine", "tags": ["health"]}
+{"id": 10, "amount": "18.50", "type": "expense", "category": "Coffee", "date": "2026-08-10T09:05:00", "description": "Morning coffee + pastry", "tags": ["food"]}
+{"id": 11, "amount": "340.00", "type": "expense", "category": "Shopping", "date": "2026-08-11T19:20:00", "description": "New headphones", "tags": ["electronics"]}
+{"id": 12, "amount": "95.00", "type": "expense", "category": "Transport", "date": "2026-08-12T07:50:00", "description": "Monthly metro card", "tags": ["commute", "fixed"]}
+{"id": 13, "amount": "28.75", "type": "expense", "category": "Food", "date": "2026-08-13T20:10:00", "description": "Dinner delivery", "tags": ["food"]}
+{"id": 14, "amount": "150.00", "type": "income", "category": "Refund", "date": "2026-08-14T11:30:00", "description": "Amazon product return", "tags": []}
+{"id": 15, "amount": "42.00", "type": "expense", "category": "Entertainment", "date": "2026-08-15T21:00:00", "description": "Cinema tickets", "tags": ["fun"]}
+{"id": 16, "amount": "67.80", "type": "expense", "category": "Groceries", "date": "2026-08-16T17:45:00", "description": "Weekend groceries", "tags": ["food"]}
+{"id": 17, "amount": "25.00", "type": "expense", "category": "Transport", "date": "2026-08-17T22:15:00", "description": "Taxi home", "tags": ["commute"]}
+{"id": 18, "amount": "89.90", "type": "expense", "category": "Clothing", "date": "2026-08-18T15:30:00", "description": "T-shirt and jeans", "tags": ["shopping"]}
+{"id": 19, "amount": "15.50", "type": "expense", "category": "Coffee", "date": "2026-08-19T08:40:00", "description": "Coffee shop", "tags": ["food"]}
+{"id": 20, "amount": "4800.00", "type": "income", "category": "Salary", "date": "2026-09-01T09:00:00", "description": "Monthly salary - September", "tags": ["regular", "main"]}
+{"id": 21, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-16T11:20:29.414670", "description": "July Salary", "tags": null}
+{"id": 22, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-16T11:20:29.415667", "description": "Monthly Rent", "tags": null}
+{"id": 23, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-16T11:20:29.415667", "description": "Groceries", "tags": null}
+{"id": 24, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-16T11:34:22.513238", "description": "July Salary", "tags": null}
+{"id": 25, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-16T11:34:22.513238", "description": "Monthly Rent", "tags": null}
+{"id": 26, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-16T11:34:22.513238", "description": "Groceries", "tags": null}
+{"id": 27, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-16T11:34:42.839762", "description": "July Salary", "tags": null}
+{"id": 28, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-16T11:34:42.839762", "description": "Monthly Rent", "tags": null}
+{"id": 29, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-16T11:34:42.839762", "description": "Groceries", "tags": null}

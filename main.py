@@ -3,9 +3,12 @@ from  expense_tracker.models import Category
 from  expense_tracker.repository import InMemoryTransactionRepository
 from  expense_tracker.tracker import ExpenseTracker
 from  expense_tracker.report import ConsoleReportGenerator
+# using JSON
+from expense_tracker.json_repository import JSONTransactionRepository
+
 
 def main():
-    repo = InMemoryTransactionRepository()
+    repo = JSONTransactionRepository("data/transactions.jsonl")
     tracker = ExpenseTracker(repo)
     report_gen = ConsoleReportGenerator()
 

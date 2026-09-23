@@ -24,8 +24,8 @@ class TransactionsRepository(ABC):
 class InMemoryTransactionRepository(TransactionsRepository):
     
     def __init__(self):
-        self._transactions: list[Transaction] = [] 
-        self._id = 1
+        self._transactions: list[Transaction] = []
+        self.next_id = 1
     
     def add(self, transaction: Transaction):
         # self.transaction.id = self._id  # pay ATTENTION !!!
@@ -42,9 +42,9 @@ class InMemoryTransactionRepository(TransactionsRepository):
         # )
 
         # Create a new immutable transaction with the correct ID
-        transaction_with_id = replace(transaction, id=self._id)
+        transaction_with_id = replace(transaction, id=self.next_id)
         self._transactions.append(transaction_with_id)
-        self._id += 1
+        self.next_id += 1
         return transaction_with_id
     
     def get_all(self) -> list[Transaction]: 

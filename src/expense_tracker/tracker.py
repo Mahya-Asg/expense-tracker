@@ -12,10 +12,26 @@ class ExpenseTracker():
     def __init__(self, repository: TransactionsRepository, factory:Optional[TransactionFactory]=None):
         self.repository = repository
         self.factory = factory or TransactionFactory()
+
+
+       # Initialize and calculate totals from existing data
+        self._recalculate_totals()
+
+    def _recalculate_totals(self):
+        """
+        Recalculate running balance, total income and total expense
+        based on all transactions currently in the repository.
+        """
         self._balance: Decimal = Decimal('0')
         self._total_income: Decimal = Decimal('0')
         self._total_expense: Decimal = Decimal('0')
-
+        for transaction in self.repository.get_all():
+            if transaction.type == TransactionType.INCOME:
+                self._total_income += transaction.amount
+                self._balance += transaction.amount
+            else:
+                self._total_expense += transaction.amount
+                self._balance -= transaction.amount
 
     def add_income(self, 
                 amount: Decimal,
