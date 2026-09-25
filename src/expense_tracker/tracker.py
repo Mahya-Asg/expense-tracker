@@ -1,3 +1,4 @@
+import logging
 from decimal import Decimal
 from typing import Optional
 
@@ -6,6 +7,7 @@ from .repository import TransactionsRepository
 from .factory import TransactionFactory
 from .report import ReportGenerator
 
+logger = logging.getLogger(__name__)
 
 
 class ExpenseTracker():
@@ -13,9 +15,9 @@ class ExpenseTracker():
         self.repository = repository
         self.factory = factory or TransactionFactory()
 
-
        # Initialize and calculate totals from existing data
         self._recalculate_totals()
+        logger.info("ExpenseTracker initialized.")
 
     def _recalculate_totals(self):
         """
@@ -40,9 +42,11 @@ class ExpenseTracker():
                 tags: tuple[str, ...] = None
                 ) -> Transaction:
         transaction = self.factory.create_income(amount, category, description,tags)
+        # use the saved_transaction for the updated id in the repository.add
         saved_transaction = self.repository.add(transaction)
         self._balance += amount
         self._total_income += amount
+        logger.info(f"Income added: {amount} | {category.name}")
         return saved_transaction
 
         
@@ -53,9 +57,11 @@ class ExpenseTracker():
                 tags: Optional[tuple[str, ...]] = None
                 ) -> Transaction:
         transaction = self.factory.create_expense(amount, category, description,tags)
+        # use the saved_transaction for the updated id in the repository.add
         saved_transaction = self.repository.add(transaction)
         self._balance -= amount
         self._total_expense += amount
+        logger.info(f"Expense added: {amount} | {category.name}")
         return saved_transaction
 
     def get_balance(self) -> Decimal:
