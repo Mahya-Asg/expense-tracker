@@ -27,3 +27,39 @@
 {"id": 27, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-16T11:34:42.839762", "description": "July Salary", "tags": null}
 {"id": 28, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-16T11:34:42.839762", "description": "Monthly Rent", "tags": null}
 {"id": 29, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-16T11:34:42.839762", "description": "Groceries", "tags": null}
+{"id": 30, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T13:50:22.848934", "description": "July Salary", "tags": null}
+{"id": 31, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T13:50:22.849946", "description": "Monthly Rent", "tags": null}
+{"id": 32, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T13:50:22.853252", "description": "Groceries", "tags": null}
+{"id": 33, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T14:05:14.896773", "description": "July Salary", "tags": null}
+{"id": 34, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T14:05:14.897526", "description": "Monthly Rent", "tags": null}
+{"id": 35, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T14:05:14.900655", "description": "Groceries", "tags": null}
+{"id": 36, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T14:07:54.897961", "description": "July Salary", "tags": null}
+{"id": 37, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T14:07:54.899962", "description": "Monthly Rent", "tags": null}
+{"id": 38, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T14:07:54.900955", "description": "Groceries", "tags": null}
+{"id": 39, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T15:37:01.359931", "description": "July Salary", "tags": null}
+{"id": 40, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T15:37:01.360929", "description": "Monthly Rent", "tags": null}
+{"id": 41, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T15:37:01.362924", "description": "Groceries", "tags": null}
+{"id": 42, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T15:55:43.061847", "description": "July Salary", "tags": null}
+{"id": 43, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T15:55:43.063842", "description": "Monthly Rent", "tags": null}
+{"id": 44, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T15:55:43.064846", "description": "Groceries", "tags": null}
+{"id": 45, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T15:59:40.006078", "description": "July Salary", "tags": null}
+{"id": 46, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T15:59:40.006078", "description": "Monthly Rent", "tags": null}
+{"id": 47, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T15:59:40.006078", "description": "Groceries", "tags": null}
+{"id": 48, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T16:01:25.984986", "description": "July Salary", "tags": null}
+{"id": 49, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T16:01:25.984986", "description": "Monthly Rent", "tags": null}
+{"id": 50, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T16:01:25.984986", "description": "Groceries", "tags": null}
+{"id": 51, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T16:08:23.593739", "description": "July Salary", "tags": null}
+{"id": 52, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T16:08:23.594737", "description": "Monthly Rent", "tags": null}
+{"id": 53, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T16:08:23.596737", "description": "Groceries", "tags": null}
+{"id": 54, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T16:09:16.961713", "description": "July Salary", "tags": null}
+{"id": 55, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T16:09:16.961713", "description": "Monthly Rent", "tags": null}
+{"id": 56, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T16:09:16.961713", "description": "Groceries", "tags": null}
+{"id": 57, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T16:10:24.515146", "description": "July Salary", "tags": null}
+{"id": 58, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T16:10:24.515146", "description": "Monthly Rent", "tags": null}
+{"id": 59, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T16:10:24.515146", "description": "Groceries", "tags": null}
+{"id": 60, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-25T16:17:59.304683", "description": "July Salary", "tags": null}
+{"id": 61, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-25T16:17:59.310648", "description": "Monthly Rent", "tags": null}
+{"id": 62, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-25T16:17:59.312025", "description": "Groceries", "tags": null}
+{"id": 63, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-29T11:06:57.729996", "description": "July Salary", "tags": null}
+{"id": 64, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-29T11:06:57.730984", "description": "Monthly Rent", "tags": null}
+{"id": 65, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-29T11:06:57.731981", "description": "Groceries", "tags": null}

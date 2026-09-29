@@ -4,17 +4,17 @@ from pathlib import Path
 
 # def setup_logger(name: str = "expense_tracker") -> logging.Logger:
 def setup_logger():
-
     """
     Configure the root logger for the application. Call this only once.
     Logs will be written both to the console and to a file.
     """
-    logger = logging.getLogger("expense_tracker")
+    # logger = logging.getLogger("expense_tracker")
+    logger = logging.getLogger()
     logger.setLevel(logging.DEBUG)
 
     # Prevent adding handlers multiple times
     if logger.handlers:
-        return logger
+        return 
 
     # Formatter
     formatter = logging.Formatter(

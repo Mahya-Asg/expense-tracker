@@ -56,7 +56,7 @@ class JSONTransactionRepository(TransactionsRepository):
 
             if self._transactions:
                 self._next_id = max((t.id for t in self._transactions), default=1) + 1
-                logger.debug(f"next_id:{self._next_id}")
+                # logger.debug(f"next_id:{self._next_id}")
                 logger.info(f"Loaded {len(self._transactions)} transactions successfully.")
                 
             else:

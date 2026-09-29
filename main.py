@@ -11,7 +11,10 @@ from  expense_tracker.report import ConsoleReportGenerator
 from expense_tracker.json_repository import JSONTransactionRepository
 
 # Configure logging only once
-logger = setup_logger()
+# logger = setup_logger()
+setup_logger()
+
+logger = logging.getLogger(__name__)
 
 def main():
     logger.info("Starting Expense Tracker...")
