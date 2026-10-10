@@ -1,5 +1,7 @@
-from decimal import Decimal
 from datetime import datetime
+from dataclasses import FrozenInstanceError
+from decimal import Decimal
+
 import pytest
 
 from expense_tracker.models import Category, Transaction, TransactionType
@@ -47,6 +49,7 @@ def test_negative_amount_raises_error():
             date=datetime.now()
         )
 
+
 def test_zero_amount_raises_error():
     category = Category("Food")
     with pytest.raises(InvalidTransactionError):
@@ -58,4 +61,48 @@ def test_zero_amount_raises_error():
             date=datetime.now()
         )
 
+
+def test_description_is_stripped():
+    category = Category("Food")
+    transaction = Transaction(
+        id=1,
+        amount=Decimal(50),
+        type=TransactionType.EXPENSE,
+        category=category,
+        date=datetime.now(),
+        description="   Lunch  ",    
+    )   
+    assert transaction.description == "Lunch"
+
+
+def test_long_description_raises_error():
+    category = Category("Food")
+    long_description = "a" * 256  # 256 characters
+
+    with pytest.raises(InvalidTransactionError):
+        Transaction(
+            id=1,
+            amount=Decimal("50"),
+            type=TransactionType.EXPENSE,
+            category=category,
+            date=datetime.now(),
+            description=long_description
+        )
+
+def test_transaction_is_frozen():
+    category = Category("Food")
+    transaction = Transaction(
+        id=1,
+        amount=Decimal("50"),
+        type=TransactionType.EXPENSE,
+        category=category,
+        date=datetime.now()
+    )
+
+    with pytest.raises(FrozenInstanceError) as exc_info:  # FrozenInstanceError
+        transaction.amount = Decimal("100")
+
+    # print(exc_info.value)           # cannot assign to field 'amount'
+    # print(exc_info.type)            # <class 'dataclasses.FrozenInstanceError'>
+    assert str(exc_info.value) == "cannot assign to field 'amount'"
 
