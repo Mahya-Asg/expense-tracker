@@ -63,3 +63,6 @@
 {"id": 63, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-09-29T11:06:57.729996", "description": "July Salary", "tags": null}
 {"id": 64, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-09-29T11:06:57.730984", "description": "Monthly Rent", "tags": null}
 {"id": 65, "amount": "300", "type": "expense", "category": "Food", "date": "2026-09-29T11:06:57.731981", "description": "Groceries", "tags": null}
+{"id": 66, "amount": "6000", "type": "income", "category": "Salary", "date": "2026-10-10T10:32:21.575844", "description": "July Salary", "tags": null}
+{"id": 67, "amount": "1500", "type": "expense", "category": "Rent", "date": "2026-10-10T10:32:21.577829", "description": "Monthly Rent", "tags": null}
+{"id": 68, "amount": "300", "type": "expense", "category": "Food", "date": "2026-10-10T10:32:21.580822", "description": "Groceries", "tags": null}
