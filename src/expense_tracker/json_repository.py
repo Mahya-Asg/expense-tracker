@@ -67,7 +67,7 @@ class JSONTransactionRepository(TransactionsRepository):
             
         
         except Exception as e:
-            logger.exception(f"Could not load transactions. Starting fresh.\nUnexpexted Error:{e}")
+            logger.exception(f"Could not load transactions. Starting fresh.\nUnexpexted Error: {e}")
             # print(f"Warning: Could not load transactions. Starting fresh.\nError: {e}")
             self._transactions = []
             self._next_id = 1
