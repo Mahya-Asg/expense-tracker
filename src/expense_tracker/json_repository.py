@@ -7,6 +7,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import List
 
+from expense_tracker.exceptions import InvalidTransactionError
 from expense_tracker.models import Category, Transaction, TransactionType
 from expense_tracker.repository import TransactionsRepository
 
@@ -50,9 +51,9 @@ class JSONTransactionRepository(TransactionsRepository):
                             tags=tuple(item["tags"]) if item.get("tags") else None,
                         )
                         self._transactions.append(transaction)
-                    except (json.JSONDecodeError, KeyError, ValueError, TypeError) as e:
+                    except (json.JSONDecodeError, KeyError, ValueError, TypeError, InvalidTransactionError) as e:
                         logger.error(f"Failed to parse line {line_number}: {e}")
-                        continue
+                        continue  # Skip bad records instead of crashing the whole load
 
             if self._transactions:
                 self._next_id = max((t.id for t in self._transactions), default=1) + 1
