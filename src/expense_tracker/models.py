@@ -30,7 +30,7 @@ class Transaction:
     type: TransactionType
     category: Category
     date: datetime
-    description: str == ""
+    description: str = ""
     tags: Optional[tuple[str, ...]] = None # pay ATTENTION !!!
 
     def __post_init__(self):
