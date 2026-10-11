@@ -1,11 +1,10 @@
 # version 4
 import json
-import logging 
-from decimal import Decimal
+import logging
 from dataclasses import replace
 from datetime import datetime
+from decimal import Decimal
 from pathlib import Path
-from typing import List
 
 from expense_tracker.exceptions import InvalidTransactionError
 from expense_tracker.models import Category, Transaction, TransactionType
@@ -22,7 +21,7 @@ class JSONTransactionRepository(TransactionsRepository):
 
     def __init__(self, file_path: str = "data/transactions.jsonl") -> None:
         self.file_path = Path(file_path)
-        self._transactions: List[Transaction] = []
+        self._transactions: list[Transaction] = []
         self._next_id: int = 1
         self._load()
 
@@ -35,7 +34,7 @@ class JSONTransactionRepository(TransactionsRepository):
         try:
             self._transactions = []
             with open(self.file_path, "r", encoding="utf-8") as file:
-                for line in file:
+                for line_number, line in enumerate(file, start=1):
                     line = line.strip()
                     if not line:
                         continue
@@ -105,13 +104,13 @@ class JSONTransactionRepository(TransactionsRepository):
         logger.info(f"Added transaction ID {transaction_with_id.id} | {transaction_with_id.type.value} | {transaction_with_id.amount}")
         self._save(transaction_with_id)
 
-    def get_all(self) -> List[Transaction]:
+    def get_all(self) -> list[Transaction]:
         return self._transactions.copy()
 
-    def get_by_category(self, category_name: str) -> List[Transaction]:
+    def get_by_category(self, category_name: str) -> list[Transaction]:
         return [t for t in self._transactions if t.category.name == category_name]
 
-    def get_by_date(self, start: datetime, end: datetime) -> List[Transaction]:
+    def get_by_date(self, start: datetime, end: datetime) -> list[Transaction]:
         return [t for t in self._transactions if start <= t.date <= end]
 
 
