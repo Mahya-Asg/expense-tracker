@@ -66,7 +66,7 @@ class JSONTransactionRepository(TransactionsRepository):
             
         
         except Exception as e:
-            logger.exception(f"Could not load transactions. Starting fresh.\nUnexpexted Error: {e}")
+            logger.exception(f"Could not load transactions. Starting fresh.\nUnexpexted Error: {e}")  # noqa: TRY401
             # print(f"Warning: Could not load transactions. Starting fresh.\nError: {e}")
             self._transactions = []
             self._next_id = 1
@@ -92,7 +92,7 @@ class JSONTransactionRepository(TransactionsRepository):
             logger.debug(f"Transaction {transaction.id} saved successfully.")
 
         except Exception as e:
-            logger.exception(f"Failed to save transaction {transaction.id}: {e}")
+            logger.exception(f"Failed to save transaction {transaction.id}: {e}")  # noqa: TRY401
             raise
 
 
