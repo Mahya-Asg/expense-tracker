@@ -1,10 +1,10 @@
 from datetime import datetime
 from decimal import Decimal
-from typing import Optional
 
-from .models import Transaction, TransactionType, Category
+from .models import Category, Transaction, TransactionType
 
-class TransactionFactory():
+
+class TransactionFactory:
     @staticmethod
     def create_income(amount: Decimal,
                     category: Category,
@@ -22,7 +22,7 @@ class TransactionFactory():
     def create_expense(amount: Decimal,
                     category: Category,
                     description: str == "",
-                    tags: Optional[tuple[str, ...]] = None) -> Transaction:
+                    tags: tuple[str, ...] | None = None) -> Transaction:
 
         return Transaction(id = 0,
                         amount = amount,

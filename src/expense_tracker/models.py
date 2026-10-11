@@ -2,7 +2,6 @@ from dataclasses import dataclass
 from datetime import datetime
 from decimal import Decimal
 from enum import Enum
-from typing import Optional # pay ATTENTION !!!
 
 from .exceptions import InvalidTransactionError
 
@@ -31,7 +30,7 @@ class Transaction:
     category: Category
     date: datetime
     description: str = ""
-    tags: Optional[tuple[str, ...]] = None # pay ATTENTION !!!
+    tags: tuple[str, ...] | None = None 
 
     def __post_init__(self):
         # 1. Validate amount
