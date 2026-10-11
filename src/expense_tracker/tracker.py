@@ -1,17 +1,16 @@
 import logging
 from decimal import Decimal
-from typing import Optional
 
-from .models import Transaction, TransactionType, Category
-from .repository import TransactionsRepository
 from .factory import TransactionFactory
+from .models import Category, Transaction, TransactionType
 from .report import ReportGenerator
+from .repository import TransactionsRepository
 
 logger = logging.getLogger(__name__)
 
 
-class ExpenseTracker():
-    def __init__(self, repository: TransactionsRepository, factory:Optional[TransactionFactory]=None):
+class ExpenseTracker:
+    def __init__(self, repository: TransactionsRepository, factory:TransactionFactory | None=None):
         self.repository = repository
         self.factory = factory or TransactionFactory()
 
@@ -24,9 +23,9 @@ class ExpenseTracker():
         Recalculate running balance, total income and total expense
         based on all transactions currently in the repository.
         """
-        self._balance: Decimal = Decimal('0')
-        self._total_income: Decimal = Decimal('0')
-        self._total_expense: Decimal = Decimal('0')
+        self._balance: Decimal = Decimal(0)
+        self._total_income: Decimal = Decimal(0)
+        self._total_expense: Decimal = Decimal(0)
         for transaction in self.repository.get_all():
             if transaction.type == TransactionType.INCOME:
                 self._total_income += transaction.amount
@@ -39,7 +38,7 @@ class ExpenseTracker():
                 amount: Decimal,
                 category: Category, 
                 description:str = "",
-                tags: tuple[str, ...] = None
+                tags: tuple[str, ...] | None = None
                 ) -> Transaction:
         transaction = self.factory.create_income(amount, category, description,tags)
         # use the saved_transaction for the updated id in the repository.add
@@ -54,7 +53,7 @@ class ExpenseTracker():
                 amount: Decimal,
                 category: Category, 
                 description:str = "", 
-                tags: Optional[tuple[str, ...]] = None
+                tags: tuple[str, ...] | None = None
                 ) -> Transaction:
         transaction = self.factory.create_expense(amount, category, description,tags)
         # use the saved_transaction for the updated id in the repository.add
