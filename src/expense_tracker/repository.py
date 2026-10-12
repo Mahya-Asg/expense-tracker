@@ -1,8 +1,9 @@
-from abc import ABC,abstractmethod
+from abc import ABC, abstractmethod
 from dataclasses import replace
 from datetime import datetime
 
-from .models import Category, Transaction
+from .models import Transaction
+
 
 class TransactionsRepository(ABC):
     @abstractmethod
