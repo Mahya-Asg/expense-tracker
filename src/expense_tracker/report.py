@@ -1,18 +1,18 @@
 from abc import ABC, abstractmethod
-from typing import List
 
 from .models import Transaction, TransactionType
+
 # from repository import TransactionsRepository, InMemoryTransactionRepository
 
 
 class ReportGenerator(ABC):
     @abstractmethod
-    def generate(self, transactions: List[Transaction]) -> str:
+    def generate(self, transactions: list[Transaction]) -> str:
         pass
 
 
 class ConsoleReportGenerator(ReportGenerator):
-    def generate(self, transactions: List[Transaction]) -> str:
+    def generate(self, transactions: list[Transaction]) -> str:
         if not transactions:
             return "No transactions found."
 
