@@ -7,6 +7,8 @@ import pytest
 from expense_tracker.exceptions import InvalidTransactionError
 from expense_tracker.models import Category, Transaction, TransactionType
 
+# ruff: noqa: FURB157
+
 
 def test_create_valid_category():
     category = Category("Food")
@@ -29,13 +31,13 @@ def test_create_valid_transaction():
     category = Category("Salary")
     transaction = Transaction(
         id=1,
-        amount=Decimal(5000),
+        amount=Decimal("5000"),
         type=TransactionType.INCOME,
         category=category,
         date=datetime.now(),
         description="Monthly salary"
     )
-    assert transaction.amount == Decimal(5000)
+    assert transaction.amount == Decimal("5000")
     assert transaction.category.name == "Salary"
 
 def test_negative_amount_raises_error():
@@ -43,7 +45,7 @@ def test_negative_amount_raises_error():
     with pytest.raises(InvalidTransactionError):
         Transaction(
             id=1,
-            amount=Decimal(-100),
+            amount=Decimal("-100"),
             type=TransactionType.EXPENSE,
             category=category,
             date=datetime.now()
@@ -55,7 +57,7 @@ def test_zero_amount_raises_error():
     with pytest.raises(InvalidTransactionError):
         Transaction(
             id=1,
-            amount=Decimal(0),
+            amount=Decimal("0"),
             type=TransactionType.EXPENSE,
             category=category,
             date=datetime.now()
@@ -82,7 +84,7 @@ def test_long_description_raises_error():
     with pytest.raises(InvalidTransactionError):
         Transaction(
             id=1,
-            amount=Decimal(50),
+            amount=Decimal("50"),
             type=TransactionType.EXPENSE,
             category=category,
             date=datetime.now(),
@@ -93,14 +95,14 @@ def test_transaction_is_frozen():
     category = Category("Food")
     transaction = Transaction(
         id=1,
-        amount=Decimal(50),
+        amount=Decimal("50"),
         type=TransactionType.EXPENSE,
         category=category,
         date=datetime.now()
     )
 
     with pytest.raises(FrozenInstanceError) as exc_info:  # FrozenInstanceError
-        transaction.amount = Decimal(100)
+        transaction.amount = Decimal("100")
 
     # print(exc_info.value)           # cannot assign to field 'amount'
     # print(exc_info.type)            # <class 'dataclasses.FrozenInstanceError'>
