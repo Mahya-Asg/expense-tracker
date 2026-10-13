@@ -8,7 +8,7 @@ class TransactionFactory:
     @staticmethod
     def create_income(amount: Decimal,
                     category: Category,
-                    description: str == "",
+                    description: str = "",
                     tags: tuple[str, ...] | None = None) -> Transaction:
         return Transaction(id = 0,  
                         amount = amount,
