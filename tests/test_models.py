@@ -7,8 +7,6 @@ import pytest
 from expense_tracker.exceptions import InvalidTransactionError
 from expense_tracker.models import Category, Transaction, TransactionType
 
-# ruff: noqa: FURB157
-
 
 def test_create_valid_category():
     category = Category("Food")
